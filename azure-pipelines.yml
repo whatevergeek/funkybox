@@ -16,5 +16,5 @@ steps:
     which rustup && rustup -V
   displayName: Ensure rustup is installed
 - bash: |
-    python --version
+    python3 --version
 
