@@ -17,7 +17,9 @@ steps:
   displayName: Ensure rustup is installed
 - bash: |
     python3 --version
+  displayName: Check Python Version
 - bash: |
     pip3 install maturin
-    which maturin && maturin --version
+  displayName: Ensure maturin is installed
+
 
