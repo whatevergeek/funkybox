@@ -7,12 +7,24 @@ trigger:
 - master
 strategy:
   matrix:
-    linux:
+    linux_py36:
       imageName: 'ubuntu-latest'
-    windows:
+      pythonVersion: '3.6'      
+    windows_py36:
       imageName: 'windows-latest'
-    mac:
+      pythonVersion: '3.6'    
+    mac_py36:
       imageName: 'macOS-latest'
+      pythonVersion: '3.6'    
+    linux_py37:
+      imageName: 'ubuntu-latest'
+      pythonVersion: '3.7'      
+    windows_py37:
+      imageName: 'windows-latest'
+      pythonVersion: '3.7'    
+    mac_py37:
+      imageName: 'macOS-latest'
+      pythonVersion: '3.7'   
 
 pool:
   vmImage: $(imageName)
@@ -26,7 +38,7 @@ steps:
   displayName: Ensure rustup is installed
 - task: UsePythonVersion@0
   inputs:
-      versionSpec: 3.6
+      versionSpec: '$(pythonVersion)'
 - bash: |
     pip install maturin
   displayName: Ensure maturin is installed
