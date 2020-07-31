@@ -1,5 +1,5 @@
 # funkybox
-[![Build Status](https://whatevergeek.visualstudio.com/funkybox/_apis/build/status/whatevergeek.funkybox?branchName=master)](https://whatevergeek.visualstudio.com/funkybox/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://whatevergeek.visualstudio.com/funkybox/_apis/build/status/whatevergeek.funkybox?branchName=master)](https://whatevergeek.visualstudio.com/funkybox/_build/latest?definitionId=1&branchName=master)    
 A collection of utility python functions made in rust.
 
 [Github Repository](https://github.com/whatevergeek/funkybox)
