@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+- task: UsePythonVersion@
+  inputs:
+      versionSpec: 3.x
+
 steps:
 # install tools (these will be cached)
 - bash: |
@@ -16,17 +20,21 @@ steps:
     which rustup && rustup -V && rustc --version
     rustup default nightly
   displayName: Ensure rustup is installed
+# - bash: |
+#     cargo build
+#   displayName: Cargo Build
 - bash: |
-    cargo build
-  displayName: Cargo Build
-- bash: |
-    python3 --version
+    python --version
   displayName: Check Python Version
 - bash: |
-    pip3 install maturin
+    pip install maturin
   displayName: Ensure maturin is installed
 - bash: |
-    maturin publish
-  displayName: Push to PYPI
+    maturin --version
+  displayName: Check maturin version
+
+# - bash: |
+#     maturin publish -u __token__ -p $PYPI_TOKEN -i $(which python3)
+#   displayName: Push to PYPI
 
 
