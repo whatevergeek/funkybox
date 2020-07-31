@@ -13,8 +13,11 @@ steps:
 # install tools (these will be cached)
 - bash: |
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path --default-toolchain none
-    which rustup && rustup -V
+    which rustup && rustup -V && rustc --version
   displayName: Ensure rustup is installed
 - bash: |
     python3 --version
+- bash: |
+    pip3 install maturin
+    which maturin && maturin --version
 
