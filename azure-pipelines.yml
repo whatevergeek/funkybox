@@ -15,6 +15,6 @@ steps:
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path --default-toolchain none
     which rustup && rustup -V
   displayName: Ensure rustup is installed
-  bash: |
+- bash: |
     python --version
 
