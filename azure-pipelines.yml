@@ -23,7 +23,7 @@ steps:
     pip3 install maturin
   displayName: Ensure maturin is installed
 - bash: |
-  cargo build
+    cargo build
   displayName: Cargo Build
 
 # - bash: |
