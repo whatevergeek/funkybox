@@ -17,17 +17,16 @@ steps:
     rustup default nightly
   displayName: Ensure rustup is installed
 - bash: |
+    cargo build
+  displayName: Cargo Build
+- bash: |
     python3 --version
   displayName: Check Python Version
 - bash: |
     pip3 install maturin
   displayName: Ensure maturin is installed
 - bash: |
-    cargo build
-  displayName: Cargo Build
-
-# - bash: |
-#     maturin publish -u __token__ -p $PYPI_TOKEN -i $(which python3)
-#   displayName: Push to PYPI
+    maturin publish -u __token__ -p $PYPI_TOKEN -i $(which python3)
+  displayName: Push to PYPI
 
 
