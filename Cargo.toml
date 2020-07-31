@@ -1,6 +1,6 @@
 [package]
 name = "funkybox"
-version = "0.1.5"
+version = "0.1.6"
 description = "A collection of utility python functions made in rust."
 authors = ["Paul Amazona"]
 edition = "2018"
