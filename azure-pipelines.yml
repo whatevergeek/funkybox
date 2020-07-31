@@ -25,7 +25,16 @@ strategy:
     mac_py37:
       imageName: 'macOS-latest'
       pythonVersion: '3.7'   
-
+    linux_py38:
+      imageName: 'ubuntu-latest'
+      pythonVersion: '3.8'      
+    windows_py38:
+      imageName: 'windows-latest'
+      pythonVersion: '3.8'    
+    mac_py38:
+      imageName: 'macOS-latest'
+      pythonVersion: '3.8'
+         
 pool:
   vmImage: $(imageName)
 
