@@ -9,11 +9,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+steps:
 - task: UsePythonVersion@
   inputs:
       versionSpec: 3.x
 
-steps:
 # install tools (these will be cached)
 - bash: |
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path --default-toolchain none
