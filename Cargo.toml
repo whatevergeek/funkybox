@@ -1,0 +1,19 @@
+[package]
+name = "funkybox"
+version = "0.1.3"
+description = "A collection of utility python functions made in rust."
+authors = ["Paul Amazona"]
+edition = "2018"
+readme = "README.md"
+repository = "https://github.com/whatevergeek/funkybox"
+keywords = ["python", "utility", "utilities"]
+
+license = "MIT"
+
+[lib]
+name = "funkybox"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.8.2"
+features = ["extension-module"]
