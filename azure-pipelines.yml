@@ -10,10 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-      versionSpec: 3.x
-
 # install tools (these will be cached)
 - bash: |
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path --default-toolchain none
@@ -23,6 +19,9 @@ steps:
 # - bash: |
 #     cargo build
 #   displayName: Cargo Build
+- task: UsePythonVersion@0
+  inputs:
+      versionSpec: 3.6
 - bash: |
     python --version
   displayName: Check Python Version
