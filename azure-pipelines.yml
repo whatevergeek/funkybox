@@ -22,7 +22,7 @@ steps:
     pip3 install maturin
   displayName: Ensure maturin is installed
 - bash: |
-    maturin publish -u __token__ -p $PYPI_TOKEN -i (which python3)
+    maturin publish -u __token__ -p $PYPI_TOKEN -i $(which python3)
   displayName: Push to PYPI
 
 
